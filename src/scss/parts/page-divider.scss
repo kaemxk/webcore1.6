@@ -1,0 +1,24 @@
+@import "../utils/vars";
+
+.page-divider {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $darkgrey;
+
+  @media (max-width: 1365px) {
+    padding-left: 24px;
+  }
+
+  @media (max-width: 540px) {
+    padding-left: 16px;
+  }
+}

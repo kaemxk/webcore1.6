@@ -1,0 +1,62 @@
+@import "../utils/vars";
+
+.services {
+  margin-top: 42px;
+
+  &__swiper {
+    overflow: hidden;
+  }
+
+  &__container {
+    padding: 0 30px 0 30px;
+
+    @media (max-width: 1365px) {
+      padding: 0 24px 0 24px;
+    }
+
+    @media (max-width: 540px) {
+      padding: 0 16px 0 16px;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: $black;
+    flex: 1 1 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 40px;
+      width: 3px;
+      border-radius: 2px;
+      top: 0;
+      left: -30px;
+      background-color: $darkgrey;
+
+      @media (max-width: 1365px) {
+        left: -24px;
+      }
+    }
+  }
+
+  &__button-box:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  &__long-line {
+    margin-top: 32px;
+  }
+
+  &__about {
+    margin-top: 32px;
+  }
+}

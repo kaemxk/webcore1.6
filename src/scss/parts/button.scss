@@ -1,0 +1,87 @@
+@import "../utils/vars";
+
+.button {
+  border: none;
+  background-color: $red;
+  color: $white;
+  cursor: pointer;
+
+  &__link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button--oval {
+  position: relative;
+  background: #FF3E79;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  padding: 4px 40px 4px 12px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../../img/arrow-right-white.svg");
+    background-repeat: no-repeat;
+    //background-size: cover;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.button--circle {
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button--circle-outlined {
+  background-color: transparent;
+  border: 2px solid $red;
+}
+
+.button--circle img {
+  object-fit: cover;
+  max-width: 20px;
+}
+
+.button--with-arrow {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  background-color: transparent;
+  border: none;
+  padding-left: 32px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url("../../img/about/arrow-down.svg");
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+

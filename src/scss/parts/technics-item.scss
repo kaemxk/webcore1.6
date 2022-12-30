@@ -1,0 +1,28 @@
+@import "../utils/vars";
+
+.technics-item {
+  max-height: 160px;
+  min-height: 160px;
+  min-width: 240px;
+  background: $white;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+  }
+}

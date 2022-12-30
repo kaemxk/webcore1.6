@@ -1,0 +1,54 @@
+@import "../utils/vars";
+
+.footer {
+  margin-top: 50px;
+  padding-bottom: 25px;
+
+
+  &__container {
+    display: flex;
+    padding-top: 32px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+    border-top: 3px solid #d9fff5;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      max-width: 320px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $darkgrey;
+      mix-blend-mode: normal;
+      opacity: 0.72;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+
+    p:first-child {
+      text-align: left;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    p:last-child {
+      text-align: right;
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+
+    p:nth-child(2) {
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+}

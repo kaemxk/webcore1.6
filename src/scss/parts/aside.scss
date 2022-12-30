@@ -1,0 +1,146 @@
+@import "../utils/vars";
+
+.aside {
+  background-color: $white;
+  max-width: 320px;
+  min-height: 100vh;
+  z-index: 1000;
+
+  @media (max-width: 1367px) {
+    min-width: 33vw;
+  }
+
+  @media (max-width: 850px) {
+    min-width: 50vw;
+  }
+
+  @media (max-width: 550px) {
+    min-width: 100vw;
+  }
+
+  &__bg {
+    z-index: 900;
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: $white;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1365px) {
+    transform: translateX(-100%);
+    position: absolute;
+    transition: all .3s;
+
+    &--active {
+      transform: translateX(0);
+      box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__logo {
+    width: 100%;
+    margin-left: 16px;
+    @media (max-width: 540px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 890px;
+    z-index: 1000;
+    position: relative;
+
+    @media (max-height: 1365px) {
+      min-height: 100vh;
+    }
+  }
+
+  &__body {
+    flex: 1 1 100%;
+    margin-bottom: 32px;
+  }
+
+  &__menu {
+    margin-top: 46px;
+
+    @media (max-height: 767px) {
+      margin-top: 22px;
+    }
+  }
+
+  &__languages {
+    margin-bottom: 32px;
+    display: flex;
+    gap: 7px;
+  }
+
+  &__language {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: $black;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    &--active {
+      color: $darkgrey;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $black;
+
+    @media (max-height: 767px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__mail {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $black;
+  }
+
+  &__buttons {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__close {
+    display: none;
+
+    @media (max-width: 1365px) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "../utils/vars";
+
+.prices {
+  margin-top: 50px;
+
+  @media (max-width: 767px) {
+    margin-top: 24px;
+  }
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 767px) {
+      background: $grey;
+    }
+  }
+
+  &__table {
+    background: #FFFFFF;
+    border-radius: 6px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+
+    &--first {
+      background: transparent;
+      border-radius: 0;
+      margin-top: 30px;
+
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    max-width: 420px;
+  }
+
+  &__btn {
+    text-align: left;
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 55%;
+      right: -15px;
+      transform: translateY(-50%);
+      background-image: url("../../img/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 10px;
+      width: 6px;
+      text-align: center;
+
+      @media (max-width: 323px) {
+        transform: none;
+        top: 32px;
+        bottom: 0;
+        right: 0;
+        left: 110px;
+      }
+    }
+  }
+}

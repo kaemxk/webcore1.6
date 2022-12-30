@@ -1,0 +1,53 @@
+@import "../utils/vars";
+
+.header {
+  background-color: $white;
+  max-height: 88px;
+  display: none;
+
+  @media (max-width: 1365px) {
+    display: block;
+    flex: 1 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+    gap: 16px;
+
+    @media (max-width: 550px) {
+      button {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__logo {
+    width: 100%;
+    @media (max-width: 540px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__divider-left {
+    @media (max-width: 540px) {
+      display: none;
+    }
+  }
+}

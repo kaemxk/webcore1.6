@@ -1,0 +1,59 @@
+@import "../utils/vars";
+
+.technics {
+  margin-top: 50px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-top: 24px;
+  }
+
+  &__container {
+    overflow: hidden;
+    margin-top: 24px;
+    padding: 0 30px 32px 30px;
+
+    @media (max-width: 1365px) {
+      padding: 0 24px 32px 24px;
+    }
+
+    @media (max-width: 540px) {
+      padding: 0 16px 32px 16px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $darkgrey;
+  }
+
+  &__row {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, 240px);
+    grid-template-rows: 1fr;
+    grid-row-gap: 16px;
+    grid-column-gap: 8px;
+
+    @media (max-width: 1365px) {
+      grid-template-columns: repeat(auto-fit, 240px);
+    }
+
+    @media (max-width: 1100px) {
+      display: flex;
+      grid-column-gap: unset;
+    }
+  }
+
+  &__show-more {
+    margin-top: 24px;
+    cursor: pointer;
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+}

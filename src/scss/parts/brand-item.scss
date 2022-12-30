@@ -1,0 +1,16 @@
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  //max-width: 240px;
+  max-height: 72px;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+
+  &--hidden {
+    display: none;
+  }
+
+}

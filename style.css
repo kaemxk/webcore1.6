@@ -851,7 +851,7 @@ body {
   max-width: 320px;
   min-height: 100vh;
   z-index: 1000; }
-  @media (max-width: 1367px) {
+  @media (max-width: 1365px) {
     .aside {
       min-width: 33vw; } }
   @media (max-width: 850px) {

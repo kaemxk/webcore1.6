@@ -16,6 +16,30 @@
     color: $black;
     text-decoration: none;
     font-weight: 500;
+    position: relative;
+
+    &:hover {
+      color: $red;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 4px;
+        background-color: $darkgrey;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        border-radius: 2px;
+
+        @media (max-width: 1365px) {
+          left: -24px;
+        }
+        @media (max-width: 540px) {
+          left: -16px;
+        }
+      }
+    }
 
     &--active {
       position: relative;
@@ -32,10 +56,6 @@
         transform: translateY(-50%);
         border-radius: 2px;
       }
-
-    }
-
-    &--active:before {
 
     }
 

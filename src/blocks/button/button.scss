@@ -44,9 +44,6 @@
     background-color: $gallery;
     color: $red;
     border: 2px solid $red;
-
-    &:before {
-    }
   }
 }
 
@@ -64,8 +61,8 @@
   &:hover {
     background-color: $darkgrey;
 
-    img {
-      filter: grayscale(0);
+    svg {
+      color: $red;
     }
   }
 }

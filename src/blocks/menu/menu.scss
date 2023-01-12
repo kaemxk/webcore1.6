@@ -20,18 +20,23 @@
     &--active {
       position: relative;
       color: $darkgrey;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 4px;
+        background-color: $darkgrey;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        border-radius: 2px;
+      }
+
     }
 
     &--active:before {
-      content: '';
-      position: absolute;
-      height: 32px;
-      width: 4px;
-      background-color: $darkgrey;
-      top: 50%;
-      left: -30px;
-      transform: translateY(-50%);
-      border-radius: 2px;
+
     }
 
     @media (max-width: 1365px) {

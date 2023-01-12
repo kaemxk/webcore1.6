@@ -25,6 +25,8 @@
   letter-spacing: -0.15px;
   text-transform: uppercase;
   padding: 4px 40px 4px 12px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 
   &:before {
     content: '';
@@ -34,9 +36,17 @@
     transform: translateY(-50%);
     background-image: url("../../img/arrow-right-white.svg");
     background-repeat: no-repeat;
-    //background-size: cover;
     width: 10px;
     height: 10px;
+  }
+
+  &:hover {
+    background-color: $gallery;
+    color: $red;
+    border: 2px solid $red;
+
+    &:before {
+    }
   }
 }
 
@@ -49,11 +59,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $darkgrey;
+
+    img {
+      filter: grayscale(0);
+    }
+  }
 }
 
 .button--circle-outlined {
   background-color: transparent;
   border: 2px solid $red;
+
+  &:hover {
+    border: 2px solid #ffe0e9;
+    background-color: #ffe0e9;
+  }
 }
 
 .button--circle img {
@@ -70,6 +94,11 @@
   background-color: transparent;
   border: none;
   padding-left: 32px;
+  transition: color .3s;
+
+  &:hover {
+    color: $red;
+  }
 
   &:before {
     content: '';

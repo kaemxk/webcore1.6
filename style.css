@@ -505,7 +505,9 @@ body {
   line-height: 24px;
   letter-spacing: -0.15px;
   text-transform: uppercase;
-  padding: 4px 40px 4px 12px; }
+  padding: 4px 40px 4px 12px;
+  transition: all 0.3s;
+  border: 2px solid transparent; }
   .button--oval:before {
     content: '';
     position: absolute;
@@ -516,6 +518,10 @@ body {
     background-repeat: no-repeat;
     width: 10px;
     height: 10px; }
+  .button--oval:hover {
+    background-color: #eaeaea;
+    color: #ff3e79;
+    border: 2px solid #ff3e79; }
 
 .button--circle {
   min-height: 40px;
@@ -525,11 +531,20 @@ body {
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  transition: all 0.3s; }
+  .button--circle:hover {
+    background-color: #7e7e82; }
+    .button--circle:hover img {
+      -webkit-filter: grayscale(0);
+              filter: grayscale(0); }
 
 .button--circle-outlined {
   background-color: transparent;
   border: 2px solid #ff3e79; }
+  .button--circle-outlined:hover {
+    border: 2px solid #ffe0e9;
+    background-color: #ffe0e9; }
 
 .button--circle img {
   object-fit: cover;
@@ -543,7 +558,10 @@ body {
   letter-spacing: -0.2px;
   background-color: transparent;
   border: none;
-  padding-left: 32px; }
+  padding-left: 32px;
+  transition: color .3s; }
+  .button--with-arrow:hover {
+    color: #ff3e79; }
   .button--with-arrow:before {
     content: '';
     position: absolute;
@@ -584,16 +602,16 @@ body {
     .menu__link--active {
       position: relative;
       color: #7e7e82; }
-    .menu__link--active:before {
-      content: '';
-      position: absolute;
-      height: 32px;
-      width: 4px;
-      background-color: #7e7e82;
-      top: 50%;
-      left: -30px;
-      transform: translateY(-50%);
-      border-radius: 2px; }
+      .menu__link--active:before {
+        content: '';
+        position: absolute;
+        height: 32px;
+        width: 4px;
+        background-color: #7e7e82;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        border-radius: 2px; }
     @media (max-width: 1365px) {
       .menu__link--active:before {
         left: -24px; } }
@@ -628,11 +646,18 @@ body {
       .long-line__item {
         width: 100%; } }
   .long-line__btn {
-    border: none;
     background-color: transparent;
     padding: 8px 21px;
     white-space: nowrap;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all .2s;
+    display: inline-flex;
+    border: 2px solid transparent;
+    border-radius: 6px; }
+    .long-line__btn:hover {
+      color: #ff3e79;
+      background-color: #ffffff;
+      border: 2px solid #ffe0e9; }
     .long-line__btn--active {
       background: #FFFFFF;
       border: 2px solid #B8FFEC;
